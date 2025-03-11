@@ -42,9 +42,11 @@ public class Car {
 	 * 25.03.05 StationWagon과 SportsCar 클래스를 이용한 상속개념 학습을 위한 MAX_SPEED 한도 변경
 	 */
 	private static final int MAX_SPEED = 350;
-		
+	private LocalDate manufactured;
 	private String name;
-
+	private int speed;
+	private int gasoline;
+	private boolean engineState;
 	/**
 	 * name 속성에 대한 getter와 setter 설정
 	 */
@@ -55,9 +57,6 @@ public class Car {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	private int speed;
-
 	/**
 	 * speed 속성에 대한 getter와 setter 설정
 	 */
@@ -80,8 +79,6 @@ public class Car {
 	public void setSpeed(int newSpeed) {
 		speed = min(newSpeed, MAX_SPEED);
 	}
-	
-	private int gasoline;
 	/**
 	 * gasoline 속성에 대한 getter와 setter 설정
 	 */
@@ -95,8 +92,6 @@ public class Car {
 	/**
 	 * engineState 속성에 대한 getter와 setter 설정
 	 */
-	private boolean engineState;
-
 	public boolean isEngineState() {
 		return engineState;
 	}
@@ -104,9 +99,6 @@ public class Car {
 	public void setEngineState(boolean engineState) {
 		this.engineState = engineState;
 	}
-	
-	private LocalDate manufactured;
-
 	/**
 	 * manufactured 속성에 대한 getter와 setter 설정
 	 */
@@ -117,7 +109,6 @@ public class Car {
 	public void setManufactured(LocalDate manufactured) {
 		this.manufactured = manufactured;
 	}
-
 	/**
 	 * manufactured 속성에 입력된 값과 현재의 LocalDate를 가져와 그 차이를 통해 자동차의 age를 얻는다.
 	 */
