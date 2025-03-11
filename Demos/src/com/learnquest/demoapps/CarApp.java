@@ -17,7 +17,17 @@ public class CarApp {
 	 * speed를 출력하는 방법에 대해 배운다.
 	 */
 	public static void main(String[] args) {
-		Car car54 = new Car();
+		/**
+		 * 25.03.11 추상 클래스 학습을 위한 Car 클래스의 추상 클래스로의 변경으로 인해
+		 * 인스턴스화 불가능 -> Car클래스를 SportsCar로 변경
+		 */
+		Car car54 = new SportsCar();
+		/**
+		 * 25.03.11 
+		 * Car와 Cargo 클래스가 추상클래스이기 때문에 new를 이용해 정의하지 못한다
+		 */
+		// car54 = new Car();
+		// car54 = new Cargo();
 
 		car54.setName("Car 54");
 		car54.setSpeed(20);
@@ -37,14 +47,27 @@ public class CarApp {
 		wagon.setManufactured(LocalDate.of(1979, 7, 29));
 		wagon.setCurrentCargoLoad(500);
 		wagon.setSpeed(75);
-		
+		/**
+		 * 25.03.06 Car 클래스에서 정의한 toString으로 println(car)로의 코드변경
+		 */
 		for (Car car : new Car[] { car54, mach5, wagon }) {
-			System.out.printf("%s is %d years old and is traveling at %d mph%n", car.getName(), car.getAge(), car.getSpeed());
+			System.out.println(car);
 		}
 		/**
 		 * 생성자 학습 후, 새로운 인스턴스 형성 시 생성자의 형태로 만들어보는 것을 학습함
 		 */
-		Car boost1 = new Car("Boost 1", 500, 100, true);
-		boost1.setManufactured(LocalDate.of(2025, 02, 26));
+		//Car boost1 = new Car("Boost 1", 500, 100, true);
+		//boost1.setManufactured(LocalDate.of(2025, 02, 26));
+		/**
+		 * 25.03.11 참조유형 학습
+		 * sc와 c는 정확히 같은 객체, 동일한 구현을 가리키고 있다
+		 * 하지만 c의 참조유형이 Car이기 때문에, SportsCar 클래스에만 있는 race 메서드를 c로는 사용할 수 없다.
+		 */
+		// Type reference = new Class(...)
+		/*SportsCar sc = new SportsCar();
+		Car c = sc;
+		sc.race();
+		c.race();
+		*/
 	}
 }

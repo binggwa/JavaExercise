@@ -79,8 +79,8 @@ public class Box {
 	/**
 	 * Box라는 생성자를 1개의 매개변수로 3개의 속성 모두에 할당할 수 있는 생성자 생성.
 	 */
-	public Box(double cube) {
-		this(cube, cube, cube);
+	public Box(double side) {
+		this(side, side, side);
 	}
 	/**
 	 * printBox 메서드를 통해 박스의 길이, 넓이, 높이, 부피, 표면적에 대해 표시하는 메서드를 생성.

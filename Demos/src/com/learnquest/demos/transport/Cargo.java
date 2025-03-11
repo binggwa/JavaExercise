@@ -6,13 +6,23 @@ package com.learnquest.demos.transport;
  * @author 이병관
  * @since 2025.03.05
  */
-public class Cargo extends Car {
+/**
+ * 추상적인 방법을 더 아래쪽으로 전파하는 예를 위해 Cargo 클래스 또한 추상클래스로 변경
+ */
+public abstract class Cargo extends Car {
 
 	private int cargoCapacity;
 	private int currentCargoLoad;
 
 	public Cargo() {
 		super();
+	}
+	/**
+	 * Cargo의 getMaxSpeed 추상 메서드에 대한 정의
+	 */
+	@Override
+	public int getMaxSpeed() {
+		return 100;
 	}
 
 	/**
