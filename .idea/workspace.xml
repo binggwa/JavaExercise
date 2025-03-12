@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d372141-d50a-4ff7-86d2-b9b3ed25a797" name="변경" comment="" />
+    <list default="true" id="2d372141-d50a-4ff7-86d2-b9b3ed25a797" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/Coursera_memo/CoreJava_course3_Object-Oriented Hierarchies in Java/Module5_Interfaces/1_Interfaces, Abstract Classes, and Polymorphism/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coursera_memo/CoreJava_course3_Object-Oriented Hierarchies in Java/Module5_Interfaces/2_Design Practices/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coursera_memo/CoreJava_course3_Object-Oriented Hierarchies in Java/Module6_Polymorphism/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Demos/src/com/learnquest/demos/transport/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassExercises/src/com/lq/exercises/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClassExercises/src/com/lq/exercises/Box.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demos/src/com/learnquest/demoapps/CarApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Demos/src/com/learnquest/demoapps/VehicleApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demos/src/com/learnquest/demos/transport/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/Demos/src/com/learnquest/demos/transport/Car.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,12 +25,22 @@
       <option value="module" />
     </option>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2uAMtGm1Xuhby0WsPerGHLDeP9p" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -31,11 +50,43 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "feature",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/binggwa/JavaExercise"
+    "last_opened_file_path": "C:/Users/binggwa/JavaExercise/Coursera_memo/CoreJava_course3_Object-Oriented Hierarchies in Java/Module5_Interfaces/1_Interfaces, Abstract Classes, and Polymorphism",
+    "project.structure.last.edited": "프로젝트",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "애플리케이션.VehicleApp.executor": "Run"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/새 스크래치 파일": [
+      "JAVA"
+    ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\binggwa\JavaExercise\Coursera_memo\CoreJava_course3_Object-Oriented Hierarchies in Java\Module5_Interfaces\1_Interfaces, Abstract Classes, and Polymorphism" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="VehicleApp" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="BUNDLED" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.learnquest.demoapps.VehicleApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learnquest.demoapps.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="디폴트 작업">
@@ -52,7 +103,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="feature" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

@@ -7,7 +7,14 @@ package com.lq.exercises;
  * @author 이병관
  * @since 2025.02.26
  */
-public class Box {
+/**
+ * @since 25.03.12
+ * CoreJava 강의 Java의 객체 지향 계층 구조
+ * Module 5 인터페이스 작업 예제
+ *
+ * 상속과 인터페이스 추가
+ */
+public class Box extends Shape implements ThreeDimensional {
 	/**
 	 * double 데이터 타입을 갖는 높이, 넓이, 길이 속성 설정
 	 * 

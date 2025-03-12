@@ -5,8 +5,9 @@ import java.time.LocalDate;
 import com.learnquest.demos.transport.Car;
 import com.learnquest.demos.transport.SportsCar;
 import com.learnquest.demos.transport.StationWagon;
+import com.learnquest.demos.transport.Vehicle;
 
-public class CarApp {
+public class VehicleApp {
 	/**
 	 * main method 시작
 	 * 25.03.05 상속 학습을 위해 Car 클래스로부터 메인 메서드 분리
@@ -47,12 +48,59 @@ public class CarApp {
 		wagon.setManufactured(LocalDate.of(1979, 7, 29));
 		wagon.setCurrentCargoLoad(500);
 		wagon.setSpeed(75);
+
+		Train train = new Train("City of New Orleans");
 		/**
 		 * 25.03.06 Car 클래스에서 정의한 toString으로 println(car)로의 코드변경
 		 */
-		for (Car car : new Car[] { car54, mach5, wagon }) {
-			System.out.println(car);
+		/*
+		for (Vehicle vehicle : new Vehicle[] { car54, mach5, wagon, train }) {
+			if (vehicle instanceof SportsCar) {
+				((SportsCar) vehicle).race();
+			} else {
+				Vehicle.travelAtSpeedLimit(vehicle);
+			}
+			System.out.println(vehicle);
 		}
+		 */
+		/**
+ 		 * 25.03.12 배열의 사용을 Java 리스트로 변경
+		 * 유틸리티 메서드의 배열을 목록으로 요청, 목록에서 우리가 원하는 것을 가져와 반환하는 것을 만든다
+ 		 */
+		List<Vehicle> vehicles = Arrays.asList(car54, mach5, wagon, train);
+		/**
+		 * 25.03.12 forEach 구문을 사용해 람다표현식으로 기존 구문을 단순화
+		 */
+
+		vehicles.forEach(vehicle -> {
+			if (vehicle instanceof SportsCar) ((SportsCar) vehicle).race();
+			else Vehicle.travelAtSpeedLimit(vehicle);
+			System.out.println(vehicle);
+		});
+
+		// 25.03.12 차량의 종류와 관련된 문제를 없애고, 빠른 속도로 주행하도록 변경
+		vehicles.forEach(vehicle -> Vehicle.travelAtSpeedLimit(vehicle));
+		vehicles.forEach(vehicle -> System.out.println(vehicle));
+
+		// 25.03.12 람다표현식 단순화, 바로 위 구문과 같은 기능 수행
+		// forEach 명령에서 나오는 매개변수가 개별 Vehicle의 매개변수로 전달되어 println에서 제한 속도로 주행할 수 있다는 것을 알아냄.
+		vehicles.forEach(Vehicle::travelAtSpeedLimit);
+		vehicles.forEach(System.out::println);
+
+		// 컴파일러는 여기서 stop 을 인스턴스 변수인 것으로 알아냄.
+		vehicles.forEach(Vehicle::stop);	// vehicle -> vehicle.stop()
+		vehicles.forEach(System.out::println);
+
+		vehicles.forEach(vehicle -> vehicle.setSpeed(25));
+		vehicles.forEach(vehicle -> System.out.printf("%s is traveling at %d mph\n", vehicle.getName(), vehicle.getSpeed()));
+
+		/**
+ 		* 25.03.12 인터페이스 사양 추가로 인한 default 메서드가 잘 작동하는지 확인용으로 추가
+ 		*/
+		/*for (Vehicle vehicle : new Vehicle[] { car54, mach5, wagon, train }) {
+			vehicle.stop();
+			System.out.println(vehicle);
+		}*/
 		/**
 		 * 생성자 학습 후, 새로운 인스턴스 형성 시 생성자의 형태로 만들어보는 것을 학습함
 		 */

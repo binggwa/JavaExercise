@@ -17,8 +17,9 @@ import java.time.Period;
 import static java.lang.Math.min;
 /**
  * 25.03.11 추상 클래스 학습을 위한 클래스 변경
+ * 25.03.12 인터페이스 학습을 위한 클래스 변경
  */
-public abstract class Car {
+public abstract class Car implements Vehicle {
 	/**
 	 * 생성자를 만드는 방법에 대해 학습함
 	 */
