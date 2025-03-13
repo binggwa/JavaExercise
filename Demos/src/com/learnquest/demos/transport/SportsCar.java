@@ -30,6 +30,23 @@ public class SportsCar extends Car {
 	public void setSpeed(int newSpeed) {
 		super.setSpeed((int) (newSpeed * 1.10));
 	}
+	/**
+	 * 25.03.11
+	 * 참조 유형 학습을 위한 race 메서드 추가
+	 * race 메서드는 속도를 최대속도로 설정한다
+	 */
+	public void race() {
+		setSpeed(getMaxSpeed());
+	}
+	/**
+	 * 25.03.11
+	 * 추상 클래스 학습으로 인한 getMaxSpeed 추상 메서드 정의
+	 * Car 추상 클래스를 상속하여 getMaxSpeed를 자식 클래스에서 정의해줌
+	 */
+	@Override
+	public int getMaxSpeed() {
+		return 350;
+	}
 	
 	
 

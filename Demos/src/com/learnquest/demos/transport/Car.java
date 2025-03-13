@@ -15,8 +15,11 @@ import java.time.Period;
  * java.lang.Math.min을 미리 정적 임포트로 불러와둠으로써 이후 Math.min이 아닌, min만으로 사용할 수 있음을 학습함
  */
 import static java.lang.Math.min;
-
-public class Car {
+/**
+ * 25.03.11 추상 클래스 학습을 위한 클래스 변경
+ * 25.03.12 인터페이스 학습을 위한 클래스 변경
+ */
+public abstract class Car implements Vehicle {
 	/**
 	 * 생성자를 만드는 방법에 대해 학습함
 	 */
@@ -41,8 +44,14 @@ public class Car {
 	 * static, 정적 키워드에 관해 학습함
 	 * 25.03.05 StationWagon과 SportsCar 클래스를 이용한 상속개념 학습을 위한 MAX_SPEED 한도 변경
 	 */
-	private static final int MAX_SPEED = 350;
-	private LocalDate manufactured;
+
+	 //private static final int MAX_SPEED = 350;
+	/**
+	 * 25.03.11 추상 클래스 학습을 위한 abstract getMaxSpeed 추상메서드로 최대속도 변경
+	 * 정해진 int 값이 아니라, 다른 종류의 차마다 최대속도를 다르게 설정할 수 있음
+	 */
+	public abstract int getMaxSpeed();
+		
 	private String name;
 	private int speed;
 	private int gasoline;
@@ -67,17 +76,16 @@ public class Car {
 	/**
 	 * 삼항연산자를 이용해 자동차의 스피드가 maxSpeed보다 큰 경우, maxSpeed로 설정하도록 제한을 걸어둔다
 	 */
-	/* 
-	public void setSpeed(int newSpeed) {
+	/*public void setSpeed(int newSpeed) {
 		speed = newSpeed <= MAX_SPEED ? newSpeed : MAX_SPEED;
 	}
-	 */
+	*/
 	/**
 	 * Javadocs의 Math 클래스를 통해 간단하게 나타내는 방법에 대해 알아봄
 	 * import한 Math의 사용처
 	 */
 	public void setSpeed(int newSpeed) {
-		speed = min(newSpeed, MAX_SPEED);
+		speed = min(newSpeed, getMaxSpeed());
 	}
 	/**
 	 * gasoline 속성에 대한 getter와 setter 설정
@@ -115,4 +123,33 @@ public class Car {
 	public int getAge() {
 		return Period.between(getManufactured(), LocalDate.now()).getYears();
 	}
+	/**
+	 * 25.03.06 Object 슈퍼클래스의 hashCode, equals, toString 학습
+	 */
+	@Override
+	public int hashCode() {
+		return name.hashCode();
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (!(obj instanceof Car))
+			return false;
+		
+		Car other = (Car) obj;
+		
+		return name.equals(other.getName());
+	}
+	/**
+	 * 25.03.06 manufactured가 없다면, NULL값을 반환할 것이므로 문자열에 오류가 생기지 않도록 null일 경우 빼주도록 변경
+	 */
+	@Override
+	public String toString() {
+		if (manufactured == null)
+			return String.format("%s is traveling at %d mph", getName(), getSpeed());
+		else
+			return String.format("%s is %d years old and is traveling at %d mph", getName(), getAge(), getSpeed());
+	}
+	
+	
 }

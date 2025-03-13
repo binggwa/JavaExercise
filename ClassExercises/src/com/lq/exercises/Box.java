@@ -7,7 +7,14 @@ package com.lq.exercises;
  * @author 이병관
  * @since 2025.02.26
  */
-public class Box {
+/**
+ * @since 25.03.12
+ * CoreJava 강의 Java의 객체 지향 계층 구조
+ * Module 5 인터페이스 작업 예제
+ *
+ * 상속과 인터페이스 추가
+ */
+public class Box extends Shape implements ThreeDimensional {
 	/**
 	 * double 데이터 타입을 갖는 높이, 넓이, 길이 속성 설정
 	 * 
@@ -79,8 +86,17 @@ public class Box {
 	/**
 	 * Box라는 생성자를 1개의 매개변수로 3개의 속성 모두에 할당할 수 있는 생성자 생성.
 	 */
-	public Box(double cube) {
-		this(cube, cube, cube);
+	public Box(double side) {
+		this(side, side, side);
+	}
+	/**
+	 * 25.03.13 ExercisePrint를 위한 생성자 추가
+	 */
+	public Box(double length, double width, double height, String color, String name) {
+
+		this(length,width,height);
+		setColor(color);
+		setName(name);
 	}
 	/**
 	 * printBox 메서드를 통해 박스의 길이, 넓이, 높이, 부피, 표면적에 대해 표시하는 메서드를 생성.
@@ -97,4 +113,24 @@ public class Box {
 			System.out.println("Surface Area = " + getSurfaceArea());
 		}
 	}
+	/**
+     * 25.03.13
+     * ExercisePrint 예제 출력을 위한 toString
+     */
+    @Override
+    public String toString() {
+    	StringBuilder builder = new StringBuilder();
+    	builder.append("Box [length = ");
+    	builder.append(length);
+    	builder.append(", width = ");
+    	builder.append(width);
+    	builder.append(", height = ");
+    	builder.append(height);
+    	builder.append(", color = ");
+    	builder.append(getColor());
+    	builder.append(", name = ");
+    	builder.append(getName());
+    	builder.append("]");
+    	return builder.toString();
+    }
 }
