@@ -90,6 +90,15 @@ public class Box extends Shape implements ThreeDimensional {
 		this(side, side, side);
 	}
 	/**
+	 * 25.03.13 ExercisePrint를 위한 생성자 추가
+	 */
+	public Box(double length, double width, double height, String color, String name) {
+
+		this(length,width,height);
+		setColor(color);
+		setName(name);
+	}
+	/**
 	 * printBox 메서드를 통해 박스의 길이, 넓이, 높이, 부피, 표면적에 대해 표시하는 메서드를 생성.
 	 * 길이, 넓이, 높이 셋 중 하나라도 0보다 작거나 같은 값이 있을 경우, 유효하지 않은 속성이 있다고 출력.
 	 */
@@ -104,4 +113,24 @@ public class Box extends Shape implements ThreeDimensional {
 			System.out.println("Surface Area = " + getSurfaceArea());
 		}
 	}
+	/**
+     * 25.03.13
+     * ExercisePrint 예제 출력을 위한 toString
+     */
+    @Override
+    public String toString() {
+    	StringBuilder builder = new StringBuilder();
+    	builder.append("Box [length = ");
+    	builder.append(length);
+    	builder.append(", width = ");
+    	builder.append(width);
+    	builder.append(", height = ");
+    	builder.append(height);
+    	builder.append(", color = ");
+    	builder.append(getColor());
+    	builder.append(", name = ");
+    	builder.append(getName());
+    	builder.append("]");
+    	return builder.toString();
+    }
 }

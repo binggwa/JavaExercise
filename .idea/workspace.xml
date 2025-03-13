@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d372141-d50a-4ff7-86d2-b9b3ed25a797" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Coursera_memo/CoreJava_course3_Object-Oriented Hierarchies in Java/Module5_Interfaces/1_Interfaces, Abstract Classes, and Polymorphism/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coursera_memo/CoreJava_course3_Object-Oriented Hierarchies in Java/Module5_Interfaces/2_Design Practices/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coursera_memo/CoreJava_course3_Object-Oriented Hierarchies in Java/Module6_Polymorphism/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demos/src/com/learnquest/demos/transport/Vehicle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClassExercises/src/com/lq/exercises/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClassExercises/src/com/lq/exercises/Box.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demos/src/com/learnquest/demoapps/CarApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Demos/src/com/learnquest/demoapps/VehicleApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demos/src/com/learnquest/demos/transport/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/Demos/src/com/learnquest/demos/transport/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassExercises/src/com/lq/exercises/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClassExercises/src/com/lq/exercises/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassExercises/src/com/lq/exercises/Cube.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClassExercises/src/com/lq/exercises/Cube.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassExercises/src/com/lq/exercises/ExerciseShapes.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClassExercises/src/com/lq/exercises/ExerciseShapes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassExercises/src/com/lq/exercises/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClassExercises/src/com/lq/exercises/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassExercises/src/com/lq/exercises/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClassExercises/src/com/lq/exercises/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassExercises/src/com/lq/exercises/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClassExercises/src/com/lq/exercises/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coursera_memo/CoreJava_course3_Object-Oriented Hierarchies in Java/Module6_Polymorphism/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Coursera_memo/CoreJava_course3_Object-Oriented Hierarchies in Java/Module6_Polymorphism/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,26 +47,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/binggwa/JavaExercise/Coursera_memo/CoreJava_course3_Object-Oriented Hierarchies in Java/Module5_Interfaces/1_Interfaces, Abstract Classes, and Polymorphism",
-    "project.structure.last.edited": "프로젝트",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "애플리케이션.VehicleApp.executor": "Run"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/binggwa/JavaExercise/Coursera_memo/CoreJava_course3_Object-Oriented Hierarchies in Java/Module5_Interfaces/1_Interfaces, Abstract Classes, and Polymorphism&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;프로젝트&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;애플리케이션.VehicleApp.executor&quot;: &quot;Run&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/새 스크래치 파일": [
-      "JAVA"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/새 스크래치 파일&quot;: [
+      &quot;JAVA&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\binggwa\JavaExercise\Coursera_memo\CoreJava_course3_Object-Oriented Hierarchies in Java\Module5_Interfaces\1_Interfaces, Abstract Classes, and Polymorphism" />

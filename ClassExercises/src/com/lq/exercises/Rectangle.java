@@ -58,4 +58,22 @@ public class Rectangle extends Shape implements TwoDimensional {
     public double getPerimeter() {
         return (2 * ( getLength() + getWidth() ));
     }
+    /**
+     * 25.03.13
+     * ExercisePrint 예제 출력을 위한 toString
+     */
+    @Override
+    public String toString() {
+    	StringBuilder builder = new StringBuilder();
+    	builder.append("Rectangle [length = ");
+    	builder.append(length);
+    	builder.append(", width = ");
+    	builder.append(width);
+    	builder.append(", color = ");
+    	builder.append(getColor());
+    	builder.append(", name = ");
+    	builder.append(getName());
+    	builder.append("]");
+    	return builder.toString();
+    }
 }

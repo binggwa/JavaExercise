@@ -18,7 +18,7 @@ public class Circle extends Shape implements TwoDimensional {
         this(radius, "White", "Unknown");
     }
     /**
-     * @param radius
+     * @param radius, color, name
      */
     public Circle(double radius, String color, String name) {
         setRadius(radius);
@@ -48,5 +48,21 @@ public class Circle extends Shape implements TwoDimensional {
 
     public double getRadius() {
         return radius;
+    }
+    /**
+     * 25.03.13
+     * ExercisePrint 예제 출력을 위한 toString
+     */
+    @Override
+    public String toString() {
+    	StringBuilder builder = new StringBuilder();
+    	builder.append("Circle [radius = ");
+    	builder.append(radius);
+    	builder.append(", color = ");
+    	builder.append(getColor());
+    	builder.append(", name = ");
+    	builder.append(getName());
+    	builder.append("]");
+    	return builder.toString();
     }
 }

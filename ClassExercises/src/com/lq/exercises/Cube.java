@@ -16,6 +16,14 @@ public class Cube extends Box {
 		super(side);
 	}
 	/**
+	 * 25.03.13 ExercisePrint를 위한 생성자 추가
+	 */
+	public Cube(double side, String color, String name) {
+		super(side);
+		setColor(color);
+		setName(name);
+	}
+	/**
 	 * 오버라이딩을 통해 높이, 넓이, 길이를 설정하는 메서드를 상속
 	 */
 	@Override

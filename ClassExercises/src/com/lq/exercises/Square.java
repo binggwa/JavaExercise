@@ -13,4 +13,12 @@ public class Square extends Rectangle implements TwoDimensional {
     public Square(double side) {
         super (side, side);
     }
+    /**
+     * 25.03.13 ExercisePrint를 위한 생성자 추가
+     */
+    public Square(double side, String color, String name) {
+        super (side, side);
+        setColor(color);
+        setName(name);
+    }
 }

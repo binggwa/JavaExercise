@@ -28,4 +28,18 @@ public abstract class Shape {
     public String getColor() {
         return color;
     }
+    /**
+     * 25.03.13
+     * ExercisePrint 예제 출력을 위한 toString
+     */
+    @Override
+    public String toString() {
+    	StringBuilder builder = new StringBuilder();
+    	builder.append("Shape [color = ");
+    	builder.append(color);
+    	builder.append(", name = ");
+    	builder.append(name);
+    	builder.append("]");
+    	return builder.toString();
+    }
 }

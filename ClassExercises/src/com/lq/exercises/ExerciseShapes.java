@@ -1,9 +1,5 @@
 package com.lq.exercises;
 
-import com.lq.exercises.Shape;
-
-import java.util.concurrent.SynchronousQueue;
-
 /**
  * CoreJava 강의 Java의 객체 지향 계층 구조
  * Module 5 인터페이스 작업 예제
@@ -13,7 +9,7 @@ import java.util.concurrent.SynchronousQueue;
  */
 public class ExerciseShapes {
 
-    public static void main(Sting[] args) {
+    public static void main(String[] args) {
         /**
          * 도형 개체 8개로 구성된 배열
          */
