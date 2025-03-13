@@ -9,6 +9,51 @@ import com.learnquest.demos.transport.Vehicle;
 
 public class VehicleApp {
 	/**
+	 * 25.03.13 제네릭 소개에 따른 코드 추가
+	 *
+	 * 객체 배열인 raceCars가 주어짐
+	 */
+	public static void race(Object[] raceCars) {
+		/**
+		 * race() 메서드는 Object 타입에서 정의되지 않았기 때문에 오류
+		 */
+		/*
+		for (Object raceCar : raceCars) {
+			raceCar.race();
+		}
+		 */
+		/**
+		 * race 메서드를 가지고 있는 SportsCar 타입으로 변경
+		 * 하지만, 여전히 raceCars는 Object 배열이기 때문에 종류가 맞지 않는다
+		 */
+		/*
+		for (SportsCar raceCar : raceCars) {
+			raceCar.race();
+		}
+		 */
+		/**
+		 * 배열에 입력된 raceCar가 SportsCar의 인스턴스인지 확인한 후,
+		 * 다운캐스트를 이용해 race 메서드 수행
+		 */
+		for (Object raceCar : raceCars) {
+			if (raceCar instanceof SportsCar) {
+				SportsCar racer = (SportsCar) raceCar;
+				racer.race();
+			}
+		}
+	}
+	/**
+	 * 컬렉션 사용을 위한 제네릭 사용법
+	 * 타입의 배열을 이용해 할 수 있던 것을 컬렉션과 제네릭을 이용해 간단하게 표현
+	 */
+	public static void race(Collection<SportsCar> raceCars) {
+		for (SportsCar raceCar : raceCars) {
+				raceCar.race();
+			}
+		}
+	}
+
+	/**
 	 * main method 시작
 	 * 25.03.05 상속 학습을 위해 Car 클래스로부터 메인 메서드 분리
 	 * 
