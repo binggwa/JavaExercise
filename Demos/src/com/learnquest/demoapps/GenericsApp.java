@@ -142,6 +142,31 @@ public class GenereicsApp {
         }
     }
 
+    public static <T> void loadFromArray(Object[] arr, Stack<T> stack) {
+        for (Object o: arr) {
+            /**
+             * o를 T의 인스턴스라고 할 수 없다.
+             * 파라미터화된 타입으로는 T의 타입이 무엇인지 알 수 없기 때문
+             */
+            if (o instanceof T) {
+
+            }
+        }
+    }
+    /**
+     * T 타입의 클래스를 받아 T 타입의 Stack으로 리턴하고, T로 파라미터화되어있다.
+     * 클래스에서는 isInstance를 사용할 수 있다.
+     */
+    public static <T> Stack<T> loadFromArray(Object[] arr, Class<T> type) {
+        Stack<T> stack = new StackArray<>(arr.length);
+        for (Object o: arr) {
+            if (type.isInstance(o)) {
+                stack.push((T) o);
+            }
+        }
+        return stack;
+    }
+
     public static void main(String[] args) {
         /**
          * ints와 String 타입의 스택
@@ -238,5 +263,11 @@ public class GenereicsApp {
         makeStackSuperCar(cars);
         makeStackSuperCar(new StackArray<Object>());
         makeStackSuperCar(racers);
+        /**
+         * Car class의 타입을 찹조하는 것이므로 Object 스택에는 할당할 수 없다.
+         */
+        Stack<Car> c = loadFromArray(new Object[] { new SUV(), new SportsCar(), new StationWagon() }, Car.class);
+        Stack<Object> o = loadFromArray(new Object[] { new SUV(), new SportsCar(), new StationWagon() }, Car.class);
+
     }
 }
