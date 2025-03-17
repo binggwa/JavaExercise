@@ -3,7 +3,7 @@
 ### 컬렉션 프레임워크
 - 컬렉션 인터페이스는 모두 java.util 패키지에 저장되어있다.
 
-![Alt text](C:\Users\qudrh\JavaExercise\Coursera_memo\CoreJava_course4_Java%20Class%20Library\Module3_Java%20Collections\2_Overview%20of%20the%20CollectionE%20Hierarchy\The_Collection_Framework.png)
+![Alt text](https://github.com/binggwa/JavaExercise/blob/develop/Coursera_memo/CoreJava_course4_Java%20Class%20Library/Module3_Java%20Collections/2_Overview%20of%20the%20CollectionE%20Hierarchy/The_Collection_Framework.png)
 
 - Collection의 서브타입 Set, Set의 서브타입 SortedSet
 - List : 한 쌍의 Set를 컬렉션으로 백업하는 것을 List라 함 
