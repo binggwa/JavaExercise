@@ -7,7 +7,7 @@
 
 - Collection의 서브타입 Set, Set의 서브타입 SortedSet
 - List : 한 쌍의 Set를 컬렉션으로 백업하는 것을 List라 함 
-- Map은 엄밀히 Collection이 아니다. : Collection은 elemente를 add하는 것을 포함하고 있지만, Map은 키 값 쌍이 전부이다. 
+- Map은 엄밀히 Collection이 아니다. : Collection은 element를 add하는 것을 포함하고 있지만, Map은 키 값 쌍이 전부이다. 
 - 일반적으로 Map을 Collection의 일부라 생각하지만, 실제로 Map이 Collection을 확장하지는 않는다.
 ***
 ### 컬렉션 인터페이스
