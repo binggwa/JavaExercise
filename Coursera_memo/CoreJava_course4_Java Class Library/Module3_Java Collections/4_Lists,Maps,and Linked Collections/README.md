@@ -24,7 +24,7 @@
 ***
 ### List 인터페이스의 중요한 메서드
 ```java
-public interface Lilst<E> extends Collection {
+public interface List<E> extends Collection {
     
     E get(int index);
     E set(int index, E element);
