@@ -14,9 +14,9 @@
 
 자바는 이런 예외를 객체로 취급해서, 모든 것은 **java.lang.Throwable** 클래스나 그 서브클래스에 속해있다.
 ***
-Throwable 계층구조
+### Throwable 계층구조
 
-![Alt text](주소 추가)
+![Alt text](https://github.com/binggwa/JavaExercise/blob/develop/Coursera_memo/CoreJava_course4_Java%20Class%20Library/Module4_Exception%20Handling/3_Checked%2C%20Unchecked%2C%20and%20Standard%20Exceptions/Throwable%EA%B3%84%EC%B8%B5%EA%B5%AC%EC%A1%B0.png)
 
 ***
 ### Checked, Unchecked 예외
