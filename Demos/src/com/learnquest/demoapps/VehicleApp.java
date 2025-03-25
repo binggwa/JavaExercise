@@ -75,11 +75,15 @@ public class VehicleApp {
 		// car54 = new Car();
 		// car54 = new Cargo();
 
-		car54.setName("Car 54");
-		car54.setSpeed(20);
-		car54.setGasoline(20);
-		car54.setManufactured(LocalDate.of(1961, 9, 17));
-		/**
+        try {
+            car54.setName("Car 54");
+            car54.setSpeed(20);
+            car54.setGasoline(20);
+            car54.setManufactured(LocalDate.of(1961, 9, 17));
+        } catch (SpeedException e) {
+			e.printStackTrace();
+        }
+        /**
 		 * 25.03.05 상속학습을 위한 mach5의 SportsCar클래스로의 변경
 		 * import를 통해 SportsCar 클래스를 가져와야 함에 유의
 		 */
@@ -89,10 +93,14 @@ public class VehicleApp {
 		 * 25.03.05 상속학습
 		 * setSpeed를 자식클래스에서 재정의해 setSpeed가 currentCargoLoad에 영향을 받아 줄어드는 모습을 확인
 		 */
-		StationWagon wagon = new StationWagon("Wagon");
-		wagon.setManufactured(LocalDate.of(1979, 7, 29));
-		wagon.setCurrentCargoLoad(500);
-		wagon.setSpeed(75);
+		try {
+			StationWagon wagon = new StationWagon("Wagon");
+			wagon.setManufactured(LocalDate.of(1979, 7, 29));
+			wagon.setCurrentCargoLoad(500);
+			wagon.setSpeed(75);
+		} catch (SpeedException e) {
+			e.printStackTrace();
+		}
 
 		Train train = new Train("City of New Orleans");
 		/**

@@ -13,7 +13,10 @@ public interface Vehicle {
     public void setName(String name);
 
     public int getspeed();
-    public void setSpeed(int newSpeed);
+    /**
+     * 250325 예외처리 학습을 위한 throws 키워드 추가
+     */
+    public void setSpeed(int newSpeed) throws SpeedException;
 
     // 25.03.12
     // 인터페이스에 사양을 추가하게 되면, 해당 인터페이스를 사용하는 모든 클래스에 메서드를 구현해야 하는 문제점이 있다.
@@ -22,19 +25,38 @@ public interface Vehicle {
     /**
      * default 메서드를 이용해 문제없이 구현가능
      */
+    /**
+     * 250325 예외처리 학습을 통한 try/catch 구문 추가
+     */
     public default void stop() {
-        setSpeed(0);
+        try {
+            setSpeed(0);
+        } catch (SpeedException e) {
+            e.printStackTrace();
+        }
     }
-
+    /**
+     * 250325 예외처리 학습을 통한 try/catch 구문 추가
+     */
     public default void slow() {
-        setSpeed(getSpeed() / 2);
+        try {
+            setSpeed(getSpeed() / 2);
+        } catch (SpeedException e) {
+            e.printStackTrace();
+        }
     }
-
     /**
      * 25.03.12 인터페이스 학습을 위한 추가
      * default, static 학습을 위한 코드위치 변경
      */
+    /**
+     * 250325 예외처리 학습을 통한 try/catch 구문 추가
+     */
     public static void travelAtSpeedLimit(Vehicle vehicle) {
-        vehicle.setSpeed(55);
+        try {
+            vehicle.setSpeed(55);
+        } catch (SpeedException e) {
+            e.printStackTrace();
+        }
     }
 }

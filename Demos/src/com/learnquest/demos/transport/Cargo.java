@@ -29,7 +29,7 @@ public abstract class Cargo extends Car {
 	 * 부모 클래스의 setSpeed를 오버라이드시켜 현재화물적재량/100 만큼 속도에서 빼주는 식으로 설정
 	 */
 	@Override
-	public void setSpeed(int newSpeed) {
+	public void setSpeed(int newSpeed) throws SpeedException {
 		super.setSpeed(newSpeed - getCurrentCargoLoad() / 100);
 	}
 
@@ -47,11 +47,11 @@ public abstract class Cargo extends Car {
 		return currentCargoLoad;
 	}
 
-	public Cargo(String name) {
+	public Cargo(String name) throws SpeedException {
 		super(name);
 	}
 
-	public Cargo(String name, int speed, int fuel, boolean running) {
+	public Cargo(String name, int speed, int fuel, boolean running) throws SpeedException {
 		super(name, speed, fuel, running);
 	}
 

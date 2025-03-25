@@ -28,13 +28,19 @@ public abstract class Car implements Vehicle {
 	/**
 	 * 1개의 매개변수로 4개의 속성에 할당할 수 있는 생성자
 	 */
-	public Car(String name) {
+	/**
+	 * 250325 예외 처리 학습을 위한 throws 키워드 추가
+	 */
+	public Car(String name) throws SpeedException {
 		this(name, 0, 0, false);
 	}
 	/**
 	 * 서명이 다르면 서로 다른 생성자도 공존할 수 있다
 	 */
-	public Car(String name, int speed, int fuel, boolean running) {
+	/**
+	 * 250325 예외 처리 학습을 위한 throws 키워드 추가
+	 */
+	public Car(String name, int speed, int fuel, boolean running) throws SpeedException {
 		setName(name);
 		setSpeed(speed);
 		setGasoline(fuel);
@@ -84,8 +90,16 @@ public abstract class Car implements Vehicle {
 	 * Javadocs의 Math 클래스를 통해 간단하게 나타내는 방법에 대해 알아봄
 	 * import한 Math의 사용처
 	 */
-	public void setSpeed(int newSpeed) {
-		speed = min(newSpeed, getMaxSpeed());
+	/**
+	 * 250325 예외 처리 학습을 위한 throws 키워드 추가 및 블록 변경
+	 */
+	public void setSpeed(int newSpeed) throws SpeedException {
+		// speed = min(newSpeed, getMaxSpeed());
+		if (newSpeed > getMaxSpeed()) {
+			throw new SpeedException(String.format("%s cannot go %dmph. Max speed is %d",
+					getName(), newSpeed, getMaxSpeed()));
+		}
+		speed = newSpeed;
 	}
 	/**
 	 * gasoline 속성에 대한 getter와 setter 설정

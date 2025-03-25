@@ -35,8 +35,18 @@ public class SportsCar extends Car {
 	 * 참조 유형 학습을 위한 race 메서드 추가
 	 * race 메서드는 속도를 최대속도로 설정한다
 	 */
+	/**
+	 * 250325 예외 처리 학습을 통한 try/catch 구문
+	 * stack trace에 대한 학습
+	 */
 	public void race() {
-		setSpeed(getMaxSpeed());
+		try {
+			setSpeed(getMaxSpeed());
+		} catch (SpeedException e) {
+			System.out.printf("Unexpected error: we tried to race, but were told that the max speed was too fast. See stack trace for details.")
+			e.printStackTrace();
+		}
+
 	}
 	/**
 	 * 25.03.11
