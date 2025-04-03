@@ -15,3 +15,16 @@
     - JavaFX
     - AWT
     - Processing
+***
+### Processing 문서 사용
+[link](https://processing.org/reference/)
+- Map의 키를 제공하는 부분은 Typography : GUI에서 텍스트를 그리는 데 사용할 수 있다.
+### Unfoldingmaps 문서
+[link](unfoldingmaps.org/javadoc/)
+- Marker를 만들기 위한 SimplePointMarker 클래스 참고
+- SimplePointMarker에서는 draw()를 호출하지 말 것
+- **라이브러리에 대한 설명서를 읽고 클래스,메서드를 사용하는 방법을 아는 것이 중요**하다.
+***
+### 맵 시각화 설정
+- 전 세계 지진 데이터를 맵에 배치하는 것을 실습
+- 세계 지도에 마커를 배치하고, 서식을 지정하는 법을 배운다.
