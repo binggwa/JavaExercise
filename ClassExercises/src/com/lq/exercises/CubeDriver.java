@@ -1,4 +1,7 @@
 package com.lq.exercises;
+
+import java.util.*;
+
 /**
  * CoreJava 강의 Java의 객체 지향 계층 구조 
  * Module 3 상속 작업
@@ -44,5 +47,9 @@ public class CubeDriver {
 		 */
 		cube2.setWidth(-5);
 		cube2.printBox();
+
+		Queue<String> queue = new LinkedList<String>();
+		Stack<String> stack = new Stack<String>();
+		PriorityQueue<String> priorityQueue = new PriorityQueue<String>();
 	}
 }
